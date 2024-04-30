@@ -39,15 +39,15 @@ const Schedule = ({
   const [mode, setMode] = useState('year')
   const [currentDate, setCurrentDate] = useState(new Date().toISOString())
 
-  useEffect(async () => {
+  useEffect(() => {
     const filterDate = generateFilterDate(mode, currentDate)
-    await handleFetchData({ ...filterDate }, mode)
-  }, [])
+    handleFetchData({ ...filterDate }, mode)
+  }, [currentDate, handleFetchData, mode])
 
-  useEffect(async () => {
+  useEffect(() => {
     const filterDate = generateFilterDate(mode, currentDate)
-    await handleFetchData({ ...filterDate }, mode)
-  }, [mode, currentDate])
+    handleFetchData({ ...filterDate }, mode)
+  }, [mode, currentDate, handleFetchData])
 
   if (!Object.values(DATE_TYPE).includes(initialMode))
     throw new Error('initialMode can be one of day, week, month or year values')

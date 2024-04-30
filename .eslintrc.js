@@ -1,6 +1,6 @@
 module.exports = {
   parser: '@babel/eslint-parser',
-  extends: ['standard', 'standard-react', 'prettier'],
+  extends: ['standard', 'standard-react', 'prettier', 'plugin:react-hooks/recommended'],
   env: {
     browser: true,
     es6: true,
