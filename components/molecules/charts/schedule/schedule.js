@@ -42,12 +42,12 @@ const Schedule = ({
   useEffect(() => {
     const filterDate = generateFilterDate(mode, currentDate)
     handleFetchData({ ...filterDate }, mode)
-  }, [currentDate, handleFetchData, mode])
+  }, [])
 
   useEffect(() => {
     const filterDate = generateFilterDate(mode, currentDate)
     handleFetchData({ ...filterDate }, mode)
-  }, [mode, currentDate, handleFetchData])
+  }, [mode, currentDate])
 
   if (!Object.values(DATE_TYPE).includes(initialMode))
     throw new Error('initialMode can be one of day, week, month or year values')
