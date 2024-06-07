@@ -93,12 +93,20 @@ const AuthorizationProvider = ({ children }) => {
     return false
   }
 
+  const hasModuleAccess = (name) => {
+    if (user && typeof user.modules === 'object') {
+      return user.modules[name]
+    }
+    return false
+  }
+
   return (
     !isLoading && (
       <AuthorizationContext.Provider
         value={{
           hasAccess,
-          hasRole
+          hasRole,
+          hasModuleAccess
         }}
       >
         {children}
