@@ -71,9 +71,9 @@ const AuthorizationProvider = ({ children }) => {
         case 'owner':
           return user.role === type + '_owner'
         case 'manager':
-          return user.role === type + '_owner' || user.role === type + '_manager'
+          return user.role === type + '_manager'
         case 'user':
-          return user.role.startsWith(type)
+          return user.role === type + '_user'
         default:
           return false
       }
