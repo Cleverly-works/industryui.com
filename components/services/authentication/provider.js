@@ -110,7 +110,7 @@ const UserProvider = ({ children }) => {
       setUser(user)
       window.localStorage.setItem('bearerToken', newToken)
       setAccessToken(newToken)
-      Router.push('/dashboard')
+      await Router.push('/dashboard')
     }
   }
 
