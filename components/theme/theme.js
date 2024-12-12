@@ -47,7 +47,6 @@ const Theme = {
   AVATAR,
   BADGE,
   BAR,
-  CALENDAR,
   COLOUR,
   COPYRIGHT,
   DETAILS2,
