@@ -2,12 +2,7 @@
  * Next Config
  */
 
-const withTM = require('next-transpile-modules')([
-  '@fullcalendar/common',
-  '@fullcalendar/daygrid',
-  '@fullcalendar/list',
-  '@fullcalendar/timegrid'
-])
+const withTM = require('next-transpile-modules')([])
 
 const withPlugins = require('next-compose-plugins')
 
@@ -24,12 +19,7 @@ const nextConfig = {
 module.exports = withPlugins([withTM, withBundleAnalyzer], nextConfig)
 
 // module.exports = withBundleAnalyzer({})
-// const withTM = require('next-transpile-modules')([
-//   '@fullcalendar/common',
-//   '@fullcalendar/daygrid',
-//   '@fullcalendar/list',
-//   '@fullcalendar/timegrid'
-// ])
+// const withTM = require('next-transpile-modules')([])
 
 // module.exports = withTM({
 //   future: {

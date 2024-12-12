@@ -23,9 +23,6 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
 // Emoji Mart
 import 'emoji-mart/css/emoji-mart.css'
 
-// Bog Calendar
-import 'react-big-calendar/lib/css/react-big-calendar.css'
-
 // Datepicker
 import 'react-datepicker/dist/react-datepicker.min.css'
 
